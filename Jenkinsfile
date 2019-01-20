@@ -7,8 +7,17 @@ pipeline {
       }
     }
     stage('resize') {
-      steps {
-        powershell 'get-date'
+      parallel {
+        stage('resize') {
+          steps {
+            powershell 'get-date'
+          }
+        }
+        stage('stop') {
+          steps {
+            powershell 'get-date'
+          }
+        }
       }
     }
   }
