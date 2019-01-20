@@ -6,5 +6,10 @@ pipeline {
         powershell 'get-date'
       }
     }
+    stage('resize') {
+      steps {
+        powershell 'get-date'
+      }
+    }
   }
 }
